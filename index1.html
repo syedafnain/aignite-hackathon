@@ -1,0 +1,825 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIginite Hackathon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="IMAGES\logo.jpg">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">AIgnite</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#problems">Problems</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#participate">Participate</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><button onclick="openRegistration()" class="register-btn">Register Now</button></li>
+
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>AIgnite Hackathon 2025</h1>
+            <p id="bindu">Organized by CSE department and IIC cell</p>
+            <p>AIgnite Innovation with Artificial Intelligence</p>
+            <p class="date">March 8, 2026</p>
+            <button onclick="openRegistration()" class="cta-button">Register Now</button>
+            <div id="countdown"></div>
+        </div>
+    </section>
+    <div id="news-ticker" class="news-ticker">
+        <p>🔴 Update: Hackathon registration is now open! | 🏆 Exciting prizes await! | 📅 Event Date: March 8, 2025 | organized by CSE and IIC cell</p>
+    </div>
+    <section id="problems" class="problems">
+        <h2>Problem Statements</h2>
+        <div class="problem-grid">
+            <div class="problem-card" style="background-image: url('IMAGES/ps1.jpg');" 
+                onmouseover="showTitle(this, 'AI for Healthcare')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI for Healthcare', 'Develop innovative AI solutions to improve healthcare diagnosis, treatment, and patient care.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps2.jpg');" 
+                onmouseover="showTitle(this, 'Sustainable AI')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('Sustainable AI', 'Create AI-powered solutions for environmental sustainability and climate change challenges.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+    
+            <div class="problem-card" style="background-image: url('IMAGES/ps3.jpg');" 
+                onmouseover="showTitle(this, 'AI in Cybersecurity')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI in Cybersecurity', 'Use AI to enhance security, detect threats, and protect digital infrastructure.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+    
+            <div class="problem-card" style="background-image: url('IMAGES/ps4.jpg');" 
+                onmouseover="showTitle(this, 'AI Education')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI Education', 'Build AI tools to enhance learning experiences and educational outcomes.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+    
+            <div class="problem-card" style="background-image: url('IMAGES/ps5.jpg');" 
+                onmouseover="showTitle(this, 'AI for Finance')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI for Finance', 'Develop AI-driven solutions for fraud detection, risk assessment, and financial automation.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+    
+            <div class="problem-card" style="background-image: url('IMAGES/ps6.jpg');" 
+                onmouseover="showTitle(this, 'AI for Smart Cities')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI for Smart Cities', 'Leverage AI to optimize urban planning, traffic management, and public services.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps8.jpg');" 
+                onmouseover="showTitle(this, 'AI in Robotics')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI in Robotics', 'Leverage AI to improve automation, robotic decision-making, and human-machine interaction.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+    
+            <div class="problem-card" style="background-image: url('IMAGES/ps7.jpg');" 
+                onmouseover="showTitle(this, 'AI in Agriculture')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI in Agriculture', 'Use AI to optimize crop management, pest control, and precision farming.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <div id="psModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="psTitle"></h2>
+            <p id="psDescription"></p>
+        </div>
+    </div>
+    
+    <section id="organizers" class="organizers">
+        <h2>Organizers</h2>
+        <div class="organizer-grid">
+            <div class="organizer-card">
+                <img src="IMAGES\org1.jpg" alt="Tech Corp">
+                <h3>Dr.M.Mohan Babu</h3>
+                <p>Principal</p>
+            </div>
+            <div class="organizer-card">
+                <img src="https://via.placeholder.com/150" alt="AI Institute">
+                <h3>Dr.E.Lokanadha Reddy</h3>
+                <p>Vice-Principal</p>
+            </div>
+            <div class="organizer-card">
+                <img src="https://via.placeholder.com/150" alt="Innovation Hub">
+                <h3>Dr.Raja Reddy</h3>
+                <p>Head-IIC</p>
+            </div>
+            <div class="organizer-card">
+                <img src="IMAGES\org4.jpg" alt="Innovation Hub">
+                <h3>Dr.P.Jyotheeswari</h3>
+                <p>HOD CSE</p>
+            </div>
+        </div>
+    </section>
+    <section id="media" class="media-section">
+        <div class="media-container">
+            
+            <div class="media-column left">
+                <img src="IMAGES/img1.jpg" alt="Left Image 1" class="media-image top">
+                <img src="IMAGES/img2.jpg" alt="Left Image 2" class="media-image bottom">
+            </div>
+    
+            
+            <div class="media-column center">
+                <video autoplay loop muted class="media-video">
+                    <source src="IMAGES/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    
+           
+            <div class="media-column right">
+                <img src="IMAGES/img3.jpg" alt="Right Image 1" class="media-image top">
+                <img src="IMAGES/img4.jpg" alt="Right Image 2" class="media-image bottom">
+            </div>
+        </div>
+    </section>
+    
+    <section id="participate" class="participate">
+        <h2>Why & How to Participate</h2>
+        <div class="participate-content">
+            <div class="why-participate animated-section">
+                <h3>Why Participate?</h3>
+                <ul>
+                    <li>Learn from AI experts and mentors</li>
+                    <li>Network with industry professionals</li>
+                    <li>Win exciting prizes worth $10,000</li>
+                    <li>Launch your AI career</li>
+                </ul>
+            </div>
+            <div class="how-participate animated-section">
+                <h3>How to Participate</h3>
+                <ol>
+                    <li>Register your team (1-4 members)</li>
+                    <li>Choose your problem statement</li>
+                    <li>Develop your solution</li>
+                    <li>Present to judges</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section id="roadmap" class="roadmap-section">
+        <h2>24-Hour Hackathon Roadmap</h2>
+        <div class="roadmap-container">
+            <div class="roadmap-path">
+                <div class="roadmap-event" style="top: 10%; left: 10%;">
+                    <div class="event-circle">Day 1 <br> 10:00 AM</div>
+                    <p>Kickoff & Idea Finalization</p>
+                </div>
+                <div class="roadmap-event" style="top: 30%; left: 30%;">
+                    <div class="event-circle">12:00 PM</div>
+                    <p>Development Phase Begins</p>
+                </div>
+                <div class="roadmap-event" style="top: 50%; left: 50%;">
+                    <div class="event-circle">6:00 PM</div>
+                    <p>Midway Checkpoint</p>
+                </div>
+                <div class="roadmap-event" style="top: 70%; left: 70%;">
+                    <div class="event-circle">11:00 PM</div>
+                    <p>Final Development Phase</p>
+                </div>
+                <div class="roadmap-event" style="top: 90%; left: 90%;">
+                    <div class="event-circle">Day 2 <br> 10:00 AM</div>
+                    <p>Submission & Presentation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="prizes" class="prizes">
+        <h2>Prizes</h2>
+        <div class="prize-container">
+            <div class="prize-box first-prize">
+                <img src="IMAGES\firstprize.jpg"alt="ftrstprize">
+               
+            </div>
+            <div class="prize-box second-prize">
+                <img src= "IMAGES/second.jpg"alt="Second Prize">
+               
+            </div>
+            <div class="prize-box third-prize">
+                <img src="IMAGES/third.jpg" alt="Third Prize">
+                
+            </div>
+        </div>
+    </section>
+                    <div id="registrationModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="form-title">Team Registration</h2>
+                    
+                           
+                            <a href="https://forms.gle/TLt6M4whnBisLM4z9" class="form-submit" target="_blank">
+                                Register
+                            </a>
+                        </div>
+                    </div>
+                    <p id="error-message" style="color: red; display: none;">At least one female member is required!</p>
+    
+    <footer>
+        <p>&copy; 2025 AIginite Hackathon. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="contact-details">
+                <p>Phone: +1234567890</p>
+                <p>Principal Email: principal@example.com</p>
+                <p>Organizer Email: organizer@example.com</p>
+                <p>Location: Your College Address</p>
+            </div>
+            <div class="social-media">
+                
+                <a href="https://www.instagram.com/cse_deptsvcet?igsh=MXE0Z3plMml0MDdoNA==" target="_blank"><i class="fab fa-instagram"></i></a>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="slogan">Knock Knock 🚪>
+         Artificial Intelligence is Knocking  </div>
+          
+         <script src="script.js"></script>  
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIginite Hackathon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="IMAGES\logo.jpg">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">AIgnite</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#problems">Problems</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#participate">Participate</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><button onclick="openRegistration()" class="register-btn">Register Now</button></li>
+        </ul>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>AIgnite Hackathon 2025</h1>
+            <p id="bindu">Organized by CSE department and IIC cell</p>
+            <p>AIgnite Innovation with Artificial Intelligence</p>
+            <p class="date">March 8, 2026</p>
+            <button onclick="openRegistration()" class="cta-button">Register Now</button>
+            <div id="countdown"></div>
+        </div>
+    </section>
+    
+    <!-- News Ticker -->
+    <div id="news-ticker" class="news-ticker">
+        <p>🔴 Update: Hackathon registration is now open! | 🏆 Exciting prizes await! | 📅 Event Date: March 8, 2026 | Organized by CSE and IIC cell | 👥 Teams of 6 members required | 👩 At least one female member mandatory</p>
+    </div>
+    
+    <!-- Problems Section -->
+    <section id="problems" class="problems">
+        <h2>Problem Statements</h2>
+        <div class="problem-grid">
+            <div class="problem-card" style="background-image: url('IMAGES/ps1.jpg');" 
+                onmouseover="showTitle(this, 'AI for Healthcare')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI for Healthcare', 'Develop innovative AI solutions to improve healthcare diagnosis, treatment, and patient care.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps2.jpg');" 
+                onmouseover="showTitle(this, 'Sustainable AI')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('Sustainable AI', 'Create AI-powered solutions for environmental sustainability and climate change challenges.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps3.jpg');" 
+                onmouseover="showTitle(this, 'AI in Cybersecurity')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI in Cybersecurity', 'Use AI to enhance security, detect threats, and protect digital infrastructure.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps4.jpg');" 
+                onmouseover="showTitle(this, 'AI Education')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI Education', 'Build AI tools to enhance learning experiences and educational outcomes.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps5.jpg');" 
+                onmouseover="showTitle(this, 'AI for Finance')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI for Finance', 'Develop AI-driven solutions for fraud detection, risk assessment, and financial automation.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps6.jpg');" 
+                onmouseover="showTitle(this, 'AI for Smart Cities')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI for Smart Cities', 'Leverage AI to optimize urban planning, traffic management, and public services.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps8.jpg');" 
+                onmouseover="showTitle(this, 'AI in Robotics')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI in Robotics', 'Leverage AI to improve automation, robotic decision-making, and human-machine interaction.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+            <div class="problem-card" style="background-image: url('IMAGES/ps7.jpg');" 
+                onmouseover="showTitle(this, 'AI in Agriculture')" 
+                onmouseout="hideTitle(this)" 
+                onclick="openPsModal('AI in Agriculture', 'Use AI to optimize crop management, pest control, and precision farming.')">
+                <div class="problem-content">
+                    <h3 class="problem-title"></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Statement Modal -->
+    <div id="psModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="psTitle"></h2>
+            <p id="psDescription"></p>
+        </div>
+    </div>
+    
+    <!-- Organizers Section -->
+    <section id="organizers" class="organizers">
+        <h2>Organizers</h2>
+        <div class="organizer-grid">
+            <div class="organizer-card">
+                <img src="IMAGES\org1.jpg" alt="Dr.M.Mohan Babu">
+                <h3>Dr.M.Mohan Babu</h3>
+                <p>Principal</p>
+            </div>
+            <div class="organizer-card">
+                <img src="https://via.placeholder.com/150" alt="Dr.E.Lokanadha Reddy">
+                <h3>Dr.E.Lokanadha Reddy</h3>
+                <p>Vice-Principal</p>
+            </div>
+            <div class="organizer-card">
+                <img src="https://via.placeholder.com/150" alt="Dr.Raja Reddy">
+                <h3>Dr.Raja Reddy</h3>
+                <p>Head-IIC</p>
+            </div>
+            <div class="organizer-card">
+                <img src="IMAGES\org4.jpg" alt="Dr.P.Jyotheeswari">
+                <h3>Dr.P.Jyotheeswari</h3>
+                <p>HOD CSE</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Media Section -->
+    <section id="media" class="media-section">
+        <div class="media-container">
+            <!-- Left Images -->
+            <div class="media-column left">
+                <img src="IMAGES/img1.jpg" alt="Left Image 1" class="media-image top">
+                <img src="IMAGES/img2.jpg" alt="Left Image 2" class="media-image bottom">
+            </div>
+    
+            <!-- Video in the Middle -->
+            <div class="media-column center">
+                <video autoplay loop muted class="media-video">
+                    <source src="IMAGES/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    
+            <!-- Right Images -->
+            <div class="media-column right">
+                <img src="IMAGES/img3.jpg" alt="Right Image 1" class="media-image top">
+                <img src="IMAGES/img4.jpg" alt="Right Image 2" class="media-image bottom">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Participate Section -->
+    <section id="participate" class="participate">
+        <h2>Why & How to Participate</h2>
+        <div class="participate-content">
+            <div class="why-participate animated-section">
+                <h3>Why Participate?</h3>
+                <ul>
+                    <li>Learn from AI experts and mentors</li>
+                    <li>Network with industry professionals</li>
+                    <li>Win exciting prizes worth $10,000</li>
+                    <li>Launch your AI career</li>
+                    <li>Certificate for all participants</li>
+                </ul>
+            </div>
+            <div class="how-participate animated-section">
+                <h3>How to Participate</h3>
+                <ol>
+                    <li>Register your team (6 members required)</li>
+                    <li>At least one female member mandatory</li>
+                    <li>Choose your problem statement</li>
+                    <li>Develop your solution</li>
+                    <li>Present to judges</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap-section">
+        <h2>24-Hour Hackathon Roadmap</h2>
+        <div class="roadmap-container">
+            <div class="roadmap-path">
+                <div class="roadmap-event" style="top: 10%; left: 10%;">
+                    <div class="event-circle">Day 1 <br> 10:00 AM</div>
+                    <p>Kickoff & Idea Finalization</p>
+                </div>
+                <div class="roadmap-event" style="top: 30%; left: 30%;">
+                    <div class="event-circle">12:00 PM</div>
+                    <p>Development Phase Begins</p>
+                </div>
+                <div class="roadmap-event" style="top: 50%; left: 50%;">
+                    <div class="event-circle">6:00 PM</div>
+                    <p>Midway Checkpoint</p>
+                </div>
+                <div class="roadmap-event" style="top: 70%; left: 70%;">
+                    <div class="event-circle">11:00 PM</div>
+                    <p>Final Development Phase</p>
+                </div>
+                <div class="roadmap-event" style="top: 90%; left: 90%;">
+                    <div class="event-circle">Day 2 <br> 10:00 AM</div>
+                    <p>Submission & Presentation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Prizes Section -->
+    <section id="prizes" class="prizes">
+        <h2>Prizes</h2>
+        <div class="prize-container">
+            <div class="prize-box first-prize">
+                <img src="IMAGES\firstprize.jpg" alt="First Prize">
+            </div>
+            <div class="prize-box second-prize">
+                <img src="IMAGES/second.jpg" alt="Second Prize">
+            </div>
+            <div class="prize-box third-prize">
+                <img src="IMAGES/third.jpg" alt="Third Prize">
+            </div>
+        </div>
+    </section>
+    
+    <!-- COMPLETE REGISTRATION MODAL - 6 MEMBERS FORM -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="form-title">Team Registration</h2>
+            <p style="text-align: center; margin-bottom: 20px; color: #003366; font-weight: bold;">Team Size: 6 Members Required | At least 1 Female Member</p>
+            
+            <form id="registrationForm">
+                <!-- Team Information -->
+                <div class="form-group">
+                    <label for="teamName" class="form-label">TEAM NAME *</label>
+                    <input type="text" id="teamName" name="teamName" class="form-input" placeholder="Enter your team name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teamLeadMobile" class="form-label">TEAM LEAD MOBILE NUMBER *</label>
+                    <input type="tel" id="teamLeadMobile" name="teamLeadMobile" class="form-input" 
+                           pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number" required>
+                </div>
+                
+                <!-- Team Members (6 members) -->
+                <h3 style="color: #003366; margin: 25px 0 15px 0; border-bottom: 2px solid #3498db; padding-bottom: 10px;">TEAM MEMBERS (All 6 Members Required)</h3>
+                
+                <!-- Member 1 -->
+                <div class="member">
+                    <h4>MEMBER 1 *</h4>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" name="member1Name" class="form-input" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Roll Number *</label>
+                            <input type="text" name="member1Roll" class="form-input" placeholder="Enter roll number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Branch *</label>
+                            <input type="text" name="member1Branch" class="form-input" placeholder="Enter branch" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="member1Email" class="form-input" placeholder="Enter email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Gender *</label>
+                            <select name="member1Gender" class="form-select" required>
+                                <option value="">Select Gender</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
+                                <option value="OTHERS">OTHERS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Member 2 -->
+                <div class="member">
+                    <h4>MEMBER 2 *</h4>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" name="member2Name" class="form-input" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Roll Number *</label>
+                            <input type="text" name="member2Roll" class="form-input" placeholder="Enter roll number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Branch *</label>
+                            <input type="text" name="member2Branch" class="form-input" placeholder="Enter branch" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="member2Email" class="form-input" placeholder="Enter email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Gender *</label>
+                            <select name="member2Gender" class="form-select" required>
+                                <option value="">Select Gender</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
+                                <option value="OTHERS">OTHERS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Member 3 -->
+                <div class="member">
+                    <h4>MEMBER 3 *</h4>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" name="member3Name" class="form-input" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Roll Number *</label>
+                            <input type="text" name="member3Roll" class="form-input" placeholder="Enter roll number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Branch *</label>
+                            <input type="text" name="member3Branch" class="form-input" placeholder="Enter branch" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="member3Email" class="form-input" placeholder="Enter email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Gender *</label>
+                            <select name="member3Gender" class="form-select" required>
+                                <option value="">Select Gender</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
+                                <option value="OTHERS">OTHERS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Member 4 -->
+                <div class="member">
+                    <h4>MEMBER 4 *</h4>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" name="member4Name" class="form-input" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Roll Number *</label>
+                            <input type="text" name="member4Roll" class="form-input" placeholder="Enter roll number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Branch *</label>
+                            <input type="text" name="member4Branch" class="form-input" placeholder="Enter branch" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="member4Email" class="form-input" placeholder="Enter email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Gender *</label>
+                            <select name="member4Gender" class="form-select" required>
+                                <option value="">Select Gender</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
+                                <option value="OTHERS">OTHERS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Member 5 -->
+                <div class="member">
+                    <h4>MEMBER 5 *</h4>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" name="member5Name" class="form-input" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Roll Number *</label>
+                            <input type="text" name="member5Roll" class="form-input" placeholder="Enter roll number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Branch *</label>
+                            <input type="text" name="member5Branch" class="form-input" placeholder="Enter branch" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="member5Email" class="form-input" placeholder="Enter email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Gender *</label>
+                            <select name="member5Gender" class="form-select" required>
+                                <option value="">Select Gender</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
+                                <option value="OTHERS">OTHERS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Member 6 -->
+                <div class="member">
+                    <h4>MEMBER 6 *</h4>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" name="member6Name" class="form-input" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Roll Number *</label>
+                            <input type="text" name="member6Roll" class="form-input" placeholder="Enter roll number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Branch *</label>
+                            <input type="text" name="member6Branch" class="form-input" placeholder="Enter branch" required>
+                        </div>
+                        <div class="form-col">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="member6Email" class="form-input" placeholder="Enter email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label class="form-label">Gender *</label>
+                            <select name="member6Gender" class="form-select" required>
+                                <option value="">Select Gender</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
+                                <option value="OTHERS">OTHERS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Problem Statement Selection -->
+                <div class="form-group">
+                    <label for="problemStatement" class="form-label">CHOOSE THE PROBLEM STATEMENT *</label>
+                    <select id="problemStatement" name="problemStatement" class="form-select" required>
+                        <option value="">-- Select Problem Statement --</option>
+                        <option value="AI for Healthcare">AI for Healthcare</option>
+                        <option value="Sustainable AI">Sustainable AI</option>
+                        <option value="AI in Cybersecurity">AI in Cybersecurity</option>
+                        <option value="AI Education">AI Education</option>
+                        <option value="AI for Finance">AI for Finance</option>
+                        <option value="AI for Smart Cities">AI for Smart Cities</option>
+                        <option value="AI in Robotics">AI in Robotics</option>
+                        <option value="AI in Agriculture">AI in Agriculture</option>
+                    </select>
+                </div>
+                
+                <!-- Solution Explanation -->
+                <div class="form-group">
+                    <label for="solutionExplanation" class="form-label">GIVE BRIEF EXPLANATION ABOUT YOUR SOLUTION *</label>
+                    <textarea id="solutionExplanation" name="solutionExplanation" class="form-textarea" 
+                              rows="6" placeholder="Explain your solution approach, technologies you plan to use, and how it solves the problem (minimum 100 characters)" 
+                              minlength="100" required></textarea>
+                    <div class="char-count" id="charCount">0 characters (minimum 100)</div>
+                </div>
+                
+                <!-- Validation Message -->
+                <div id="validationMessage" style="display: none;">
+                    ⚠️ At least one female member is required in the team!
+                </div>
+                
+                <!-- Terms and Conditions -->
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="form-label">I confirm that all information provided is correct and I agree to the terms and conditions *</label>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">SUBMIT REGISTRATION</button>
+                
+                <!-- Form Message -->
+                <div id="formMessage" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AIgnite Hackathon. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="contact-details">
+                <p>Phone: +91 12345 67890</p>
+                <p>Email: cse@svcet.edu.in</p>
+                <p>Location: SVCET, Chittoor, Andhra Pradesh</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/cse_deptsvcet?igsh=MXE0Z3plMml0MDdoNA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="slogan">
+        Knock Knock 🚪 Artificial Intelligence is Knocking
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
