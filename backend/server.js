@@ -22,7 +22,12 @@ const app = express();
 // Middleware
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5500', 'http://127.0.0.1:5500', 'http://localhost:3000', 'http://127.0.0.1:5501'],
+    origin: [
+        'http://localhost:5500', 
+        'http://127.0.0.1:5500', 
+        'http://localhost:3000',
+        'https://stellular-halva-eb0bed.netlify.app'  // <-- ADD THIS!
+    ],
     credentials: true
 }));
 
