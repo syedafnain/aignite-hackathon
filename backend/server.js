@@ -13,20 +13,20 @@ const connectDB = require('./config/db');
 // Import routes
 const registrationRoutes = require('./routes/registrationRoutes');
 
+// Initialize Express FIRST!
+const app = express();
+
 // Connect to MongoDB
 connectDB();
 
-// Initialize Express
-const app = express();
-
-// Middleware
-// Middleware
+// Middleware - NOW app is defined!
 app.use(cors({
     origin: [
-        'http://localhost:5500', 
-        'http://127.0.0.1:5500', 
+        'http://localhost:5500',
+        'http://127.0.0.1:5500',
         'http://localhost:3000',
-        'https://stellular-halva-eb0bed.netlify.app'  // <-- ADD THIS!
+        'https://stellular-halva-eb0bed.netlify.app',
+        'https://voluble-travesseiro-a1a9fd.netlify.app' // ADD YOUR NEW URL!
     ],
     credentials: true
 }));
@@ -79,7 +79,7 @@ app.use((err, req, res, next) => {
 // Start server
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log('=================================');
     console.log(`🚀 Server running on port ${PORT}`);
     console.log(`📡 Environment: ${process.env.NODE_ENV || 'development'}`);
