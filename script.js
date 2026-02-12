@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Submitting registration:", formObject);
 
                 // Send to backend (update URL when deployed)
-                const response = await fetch("https://aignite-hackathon.onrender.com/api/register", {
+                const response = await fetch("https://agnite-hackathon.onrender.com/api/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
