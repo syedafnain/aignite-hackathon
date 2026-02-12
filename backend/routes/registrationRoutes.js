@@ -1,4 +1,5 @@
 // routes/registrationRoutes.js
+console.log('📦 Loading registration routes...');
 const express = require('express');
 const router = express.Router();
 const { registerTeam, getAllRegistrations } = require('../controllers/registrationController');

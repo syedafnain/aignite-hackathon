@@ -39,9 +39,9 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 // Routes
 app.use('/api', registrationRoutes);
+console.log('✅ API routes registered: /api/register, /api/registrations'); // ADD THIS LINE
 
 // Health check
 app.get('/health', (req, res) => {
