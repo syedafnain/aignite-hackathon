@@ -33,9 +33,11 @@ connectDB();
 
 // Middleware - SIMPLIFIED CORS FOR PRODUCTION
 app.use(cors({
-    origin: '*',  // Allow ALL origins temporarily
-    credentials: true
+    origin: "https://voluble-travesseiro-a1a9fd.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"]
 }));
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

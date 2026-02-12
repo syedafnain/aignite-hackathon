@@ -179,14 +179,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Submitting registration:", formObject);
 
                 // Send to backend (update URL when deployed)
-                const response = await fetch("https://agnite-hackathon.onrender.com/api/register", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formObject)
-                });
+                // Send to backend - ULTRA SIMPLE VERSION
+console.log("🚀 Sending to:", "https://agnite-hackathon.onrender.com/api/register");
 
+const response = await fetch("https://agnite-hackathon.onrender.com/api/register", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formObject)
+});
+
+console.log("✅ Response status:", response.status);
                 const result = await response.json();
 
                 const messageEl = document.getElementById("formMessage");
